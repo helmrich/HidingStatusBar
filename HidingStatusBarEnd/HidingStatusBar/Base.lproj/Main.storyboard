@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4yU-gc-zzk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Initial View Controller-->
+        <scene sceneID="NiU-k2-vZb">
+            <objects>
+                <viewController id="4yU-gc-zzk" customClass="InitialViewController" customModule="HidingStatusBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A9w-4c-bbt"/>
+                        <viewControllerLayoutGuide type="bottom" id="NuN-5h-SSn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Ah-aK-BAI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G22-tf-HSh">
+                                <rect key="frame" x="138" y="318" width="99" height="30"/>
+                                <state key="normal" title="Present Modal"/>
+                                <connections>
+                                    <action selector="presentModal:" destination="4yU-gc-zzk" eventType="touchUpInside" id="Bis-vR-YVc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G22-tf-HSh" firstAttribute="centerX" secondItem="6Ah-aK-BAI" secondAttribute="centerX" id="SBn-48-101"/>
+                            <constraint firstItem="G22-tf-HSh" firstAttribute="centerY" secondItem="6Ah-aK-BAI" secondAttribute="centerY" id="ut4-yi-AON"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xaJ-sw-BYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63" y="139"/>
+        </scene>
+        <!--Modal View Controller-->
+        <scene sceneID="Pdu-I4-zyl">
+            <objects>
+                <viewController storyboardIdentifier="ModalViewController" id="Jns-7d-mMF" customClass="ModalViewController" customModule="HidingStatusBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yrk-RK-ukK"/>
+                        <viewControllerLayoutGuide type="bottom" id="JgM-nL-DV4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rKS-95-8Je">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMa-Wz-79F">
+                                <rect key="frame" x="137" y="318" width="100" height="30"/>
+                                <state key="normal" title="Dismiss Modal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissModal:" destination="Jns-7d-mMF" eventType="touchUpInside" id="wWs-O9-eZF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.58823529411764708" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fMa-Wz-79F" firstAttribute="centerX" secondItem="rKS-95-8Je" secondAttribute="centerX" id="I7e-NA-zWu"/>
+                            <constraint firstItem="fMa-Wz-79F" firstAttribute="centerY" secondItem="rKS-95-8Je" secondAttribute="centerY" id="qtx-ch-v25"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dpF-uX-AeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="863" y="139"/>
+        </scene>
+    </scenes>
+</document>
