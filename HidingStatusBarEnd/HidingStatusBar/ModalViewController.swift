@@ -10,6 +10,10 @@ import UIKit
 
 class ModalViewController: UIViewController {
 
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     @IBAction func dismissModal(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
